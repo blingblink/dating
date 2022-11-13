@@ -1,0 +1,77 @@
+<resources>
+    <!--
+   * DatingApp
+    * https://github.com/quintuslabs/DatingApp
+    * Created on 25-sept-2018.
+    * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
+    -->
+    <string name="app_name">Love Dating</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Firebase database fields -->
+    <string name="dbfemale">female</string>
+    <string name="dbmale">male</string>
+    <string name="title_activity_check_profile_before_matched">activity_checkProfileBeforeMatched
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="match_notification">Match Notification</string>
+    <string name="ok">ok</string>
+    <string name="permission_camera_rationale">Request for camera permission</string>
+    <string name="permission_contacts_rationale">GALLERY PERMISSION</string>
+    <string name="permision_available_camera">camera available</string>
+
+    <!-- introduction pictures-->
+    <integer-array name="img_id_arr">
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+        <item>@drawable/img4</item>
+    </integer-array>
+    <string name="title_activity_splash_screen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="ab">Giới thiệu về bản thân</string>
+    <string name="writetrodu">Viết gì đó giới thiệu về bản thân</string>
+    <string name="job">Nghề nghiệp</string>
+    <string name="company">Công ty</string>
+    <string name="school">Trường học</string>
+    <string name="addschool">Thêm trường học</string>
+    <string name="Gender">Giới tính</string>
+    <string name="controlpro">Điều chỉnh</string>
+    <string name="showage">Không hiện tuổi của tôi</string>
+    <string name="showdistant">Không hiện khoảng cách của tôi</string>
+    <string name="btnsignup">Đăng kí</string>
+    <string name="btnlogin">Đăng nhập</string>
+    <string name="noaccount">Không có tài khoản? Đăng kí</string>
+    <string name="active">Đang hoạt động</string>
+    <string name="Matches">Tương hợp</string>
+    <string name="date">Nhập ngày sinh</string>
+    <string name="continuebtn">Tiếp tục</string>
+    <string name="chooseGender">Chọn giới tính</string>
+    <string name="hobbies"> Hãy chọn sở thích</string>
+    <string name="enterEmail">Hãy nhập email</string>
+    <string name="enterPW">Hãy nhập mật khẩu</string>
+    <string name="enteruser">Nhập tên người dùng</string>
+    <string name="existingaccount">Đã có tài khoản? Hãy đăng nhập</string>
+    <string name="show">Hiển thị cho tôi</string>
+    <string name="male">Nam</string>
+    <string name="female">Nữ</string>
+    <string name="age">Khoảng cách tuổi</string>
+    <string name="setting">Cài đặt</string>
+    <string name="notification">Thông báo</string>
+    <string name="message">Tin nhắn</string>
+    <string name="messagelike">Lượt thích</string>
+    <string name="contact">Liên hệ</string>
+    <string name="support">Hỗ trợ</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="deleteAccount">Xoá tài khoản</string>
+
+</resources>

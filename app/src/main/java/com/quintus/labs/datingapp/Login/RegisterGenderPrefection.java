@@ -1,0 +1,95 @@
+package com.quintus.labs.datingapp.Login;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+
+import com.quintus.labs.datingapp.R;
+import com.quintus.labs.datingapp.Utils.User;
+
+
+
+
+public class RegisterGenderPrefection extends AppCompatActivity {
+
+    String password;
+    User user;
+    boolean preferMale = true;
+    private Button preferenceContinueButton;
+    private Button hobbiesContinueButton;
+    private Button maleSelectionButton;
+    private Button femaleSelectionButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register_gender_prefection);
+
+        Intent intent = getIntent();
+
+
+
+        maleSelectionButton = findViewById(R.id.maleSelectionButton);
+        femaleSelectionButton = findViewById(R.id.femaleSelectionButton);
+        preferenceContinueButton = findViewById(R.id.preferenceContinueButton);
+        //By default male has to be selected so below code is added
+
+        femaleSelectionButton.setAlpha(.5f);
+        femaleSelectionButton.setBackgroundColor(Color.GRAY);
+
+
+        maleSelectionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                maleButtonSelected();
+            }
+        });
+
+        femaleSelectionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                femaleButtonSelected();
+            }
+        });
+
+        preferenceContinueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAgeEntryPage();
+            }
+        });
+
+
+    }
+
+    public void maleButtonSelected() {
+        preferMale = true;
+        maleSelectionButton.setBackgroundColor(Color.parseColor("#FF4081"));
+        maleSelectionButton.setAlpha(1.0f);
+        femaleSelectionButton.setAlpha(.5f);
+        femaleSelectionButton.setBackgroundColor(Color.GRAY);
+    }
+
+    public void femaleButtonSelected() {
+        preferMale = false;
+        femaleSelectionButton.setBackgroundColor(Color.parseColor("#FF4081"));
+        femaleSelectionButton.setAlpha(1.0f);
+        maleSelectionButton.setAlpha(.5f);
+        maleSelectionButton.setBackgroundColor(Color.GRAY);
+    }
+
+    public void openAgeEntryPage() {
+        String preferSex = preferMale ? "male" : "female";
+
+        Intent intent = new Intent(this, RegisterAge.class);
+        intent.putExtra("username", getIntent().getStringExtra("username"));
+        intent.putExtra("email", getIntent().getStringExtra("email"));
+        intent.putExtra("sex", getIntent().getStringExtra("sex"));
+        intent.putExtra("preferSex", preferSex);
+        intent.putExtra("defaultPhoto", getIntent().getStringExtra("defaultPhoto"));
+        startActivity(intent);
+    }
+}
